@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_strdup.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/23 10:32:58 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/23 10:32:59 by alexanderka   ########   odam.nl         */
+/*   Created: 2021/02/12 14:08:47 by akant         #+#    #+#                 */
+/*   Updated: 2021/02/12 14:08:49 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

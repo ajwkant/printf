@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/19 15:25:47 by akant         #+#    #+#                 */
-/*   Updated: 2021/02/12 08:29:59 by akant         ########   odam.nl         */
+/*   Updated: 2021/02/12 15:59:39 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ t_word	*node_init(void)
 int		is_specifier(t_word *node, char c, va_list *varlist, int i)
 {
 	if (!in_set(c, "cspdiuxX%%"))
-		return (-1);
+		return (free_node(node));
 	if (c == 'c')
 		return (char_convert(varlist, node, i));
 	else if (c == 's')
@@ -95,6 +95,13 @@ int		arg_parser(char *string, int i, va_list *varlist)
 	if (!new_node)
 		return (-1);
 	i++;
+	while (string[i] == ' ')
+		i++;
+	if (string[i - 1] == ' ')
+	{
+		write(1, " ", 1);
+		g_char_count++;
+	}
 	while (in_set(string[i], "-0"))
 		i = flags_parser(new_node, string, i, varlist);
 	if (ft_isdigit(string[i]))
